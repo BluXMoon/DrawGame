@@ -17,8 +17,7 @@ public class SlowScript : MonoBehaviour
         while(Time.timeScale > 0.2f)
         {
             Time.timeScale -= 0.02f;
-            yield return new WaitForSecondsRealtime(0.04f);
-            print(Time.timeScale);
+            yield return new WaitForSecondsRealtime(0.02f);
         }
 
         yield return new WaitForSecondsRealtime(2f);
@@ -26,8 +25,7 @@ public class SlowScript : MonoBehaviour
         while (Time.timeScale < 1f)
         {
             Time.timeScale += 0.02f;
-            yield return new WaitForSecondsRealtime(0.04f);
-            print(Time.timeScale);
+            yield return new WaitForSecondsRealtime(0.02f);
         }
     }
 }
