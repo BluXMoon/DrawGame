@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LinesDrawer : MonoBehaviour
 {
-    public GameObject linePrefab;
+    public Line linePrefab;
 
     public Gradient lineColor;
     public float linePointsMinDistance, lineWidth;
@@ -19,20 +19,20 @@ public class LinesDrawer : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            BeginDraw();
-        }
+         if (Input.GetMouseButtonDown(0))
+         {
+             BeginDraw();
+         }
 
-        if(currentLine != null)
-        {
-            Draw();
-        }
+         if(currentLine != null)
+         {
+             Draw();
+         }
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            EndDraw();
-        }
+         if (Input.GetMouseButtonUp(0))
+         {
+             EndDraw();
+         }
     }
 
     void BeginDraw()
